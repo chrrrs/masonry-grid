@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import styles from "./styles.module.css";
 
 const MasonryGrid = ({ children, gap, minWidth }) => {
   const columns = [];
@@ -33,11 +32,22 @@ const MasonryGrid = ({ children, gap, minWidth }) => {
   createColumns();
 
   return (
-    <div className={styles.grid} ref={grid} style={{ gridGap: gap }}>
+    <div
+      ref={grid}
+      style={{ display: "grid", gridAutoFlow: "column", gridGap: gap }}
+    >
       {Array(numberOfColumns)
         .fill()
         .map((_, i) => (
-          <div className={styles.column} key={i} style={{ gridGap: gap }}>
+          <div
+            className={styles.column}
+            key={i}
+            style={{
+              display: "grid",
+              gridAutoRows: "max-content",
+              gridGap: gap,
+            }}
+          >
             {columns[i]}
           </div>
         ))}
