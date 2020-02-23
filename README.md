@@ -40,5 +40,5 @@ export default MyComponent;
 | Prop     | Default | Description                                                                                                                     |
 | -------- | :-----: | ------------------------------------------------------------------------------------------------------------------------------- |
 | children |   []    |                                                                                                                                 |
-| gap      | 11.4rem | A string with the value of the gap, which should be present between the elements in the grid - support rem, em, px, vw, vh etc. |
+| gap      |  100px  | A string with the value of the gap, which should be present between the elements in the grid - support rem, em, px, vw, vh etc. |
 | minWidth |   800   | A number representing the minimum width of the elements within the grid.                                                        |
